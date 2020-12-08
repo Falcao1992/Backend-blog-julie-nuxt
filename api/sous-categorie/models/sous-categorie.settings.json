@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sous_categories",
+  "info": {
+    "name": "Sous-Categorie",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "recettes": {
+      "via": "sous_categories",
+      "collection": "recette"
+    },
+    "categorie": {
+      "model": "categorie",
+      "via": "sous_categories"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

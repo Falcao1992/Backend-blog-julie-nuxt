@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contenu_pages",
+  "info": {
+    "name": "contenu-page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "page": {
+      "type": "string"
+    },
+    "bg_img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "articles": {
+      "via": "contenu_page",
+      "collection": "article"
+    }
+  }
+}

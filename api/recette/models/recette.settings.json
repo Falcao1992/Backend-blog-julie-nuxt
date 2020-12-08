@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recettes",
+  "info": {
+    "name": "recette",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "nbPersonne": {
+      "type": "integer"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "preparation": {
+      "type": "richtext"
+    },
+    "ingredients": {
+      "type": "text"
+    },
+    "temps": {
+      "type": "integer"
+    },
+    "ustensiles": {
+      "type": "text"
+    },
+    "categorie": {
+      "model": "categorie",
+      "via": "recettes"
+    },
+    "sous_categories": {
+      "collection": "sous-categorie",
+      "via": "recettes",
+      "dominant": true
+    }
+  }
+}
