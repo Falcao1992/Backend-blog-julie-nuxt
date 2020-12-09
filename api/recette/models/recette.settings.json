@@ -42,18 +42,6 @@
       "plugin": "upload",
       "required": false
     },
-    "preparation": {
-      "type": "richtext"
-    },
-    "ingredients": {
-      "type": "text"
-    },
-    "temps": {
-      "type": "integer"
-    },
-    "ustensiles": {
-      "type": "text"
-    },
     "categorie": {
       "model": "categorie",
       "via": "recettes"
