@@ -50,6 +50,9 @@
       "collection": "sous-categorie",
       "via": "recettes",
       "dominant": true
+    },
+    "ingredients": {
+      "type": "text"
     }
   }
 }
